@@ -9,7 +9,6 @@
     <style>
         body {
             font-family: 'Courier New', monospace;
-            background-image: url("{{ background_image }}");
             background-size: cover;
             margin: 0;
             padding: 0;
@@ -36,6 +35,12 @@
             color: white;
         }
     </style>
+
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
 </head>
 <body>
     <header class="hero">
@@ -61,20 +66,23 @@
             </div>
         </div>
     </header>
-    
-    <section class="user-input">
-        <h2>Enter a Tweet</h2>
-        <form method="POST">
-            <textarea name="user_tweet" rows="4" cols="50"></textarea><br>
-            <button type="submit">Analyze</button>
-        </form>
-    </section>
+    <div class="container">
+        <section class="user-input">
+            <h2>Enter a Tweet</h2>
+            <form method="POST" id="form1" >
+                <textarea name="user_tweet" rows="2" cols="44"></textarea><br>
+                <button type="submit">Analyze</button>
+            </form>
+            {% if sentiment_result %}
+                <h2>Result: {{ sentiment_result }} </h2>
+            {% endif %}
+        </section>
 
-    <section class="result">
         {% if sentiment_result %}
-        <h2>Result: {{ sentiment_result }}</h2>
-        <img src="{{ wordcloud_img }}" alt="WordCloud Image">
+            <section class="result">
+                <img src="{{ wordcloud_img }}" alt="WordCloud Image" class="genImage">
+            </section>
         {% endif %}
-    </section>
+    </div>
 </body>
 </html>
