@@ -17,7 +17,7 @@ Welcome to the **Sentiment Analysis Web App**! This project allows users to inpu
 
 1. Clone this repository to your local machine.
 2. Set up a virtual environment and install the required dependencies using `pip install flask textblob wordcloud`.
-3. Run the Flask app using `python app.py`.
+3. Run the Flask app using `python App.py`.
 4. Open your web browser and go to `http://localhost:5000`.
 5. Enter a sentence or tweet and see the sentiment analysis results!
 
