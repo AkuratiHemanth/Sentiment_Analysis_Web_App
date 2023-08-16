@@ -33,6 +33,9 @@ The sentiment analysis model classifies input sentences into three categories: p
 
 The app displays the sentiment analysis result along with an appropriate emoji and corresponding images to enhance the user experience.
 
+
+To have a look into the model of Sentimental Analysis based on the tweets of **Adipurush Movie**, you can have a look into the following link: https://github.com/AkuratiHemanth/Emotion_Insights_Adipurush_Movie
+
 Feel free to contribute and improve the project by submitting pull requests! :sparkles:
 
 ---
