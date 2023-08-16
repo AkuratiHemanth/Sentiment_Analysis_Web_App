@@ -11,12 +11,15 @@ def get_background_image():
 @app.route("/")
 def index():
     background_image = get_background_image()
-    return render_template("index.html", background_image=background_image)
+    return render_template("index.html", background_image=background_image, sentiment_result=None, wordcloud_img=None)
+
 
 @app.route("/", methods=["GET", "POST"])
 def analyze_tweet():
     sentiment_result = None
     wordcloud_img = None
+
+    print("TWEET",request.form["user_tweet"])
 
     if request.method == "POST":
         user_tweet = request.form["user_tweet"]
@@ -26,9 +29,11 @@ def analyze_tweet():
 
         wordcloud_img = generate_wordcloud(user_tweet)
 
-    return render_template("index.html",
-                           sentiment_result=sentiment_result,
-                           wordcloud_img=wordcloud_img)
+        return render_template("index.html",
+                            sentiment_result=sentiment_result,
+                            wordcloud_img=wordcloud_img)
+
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
