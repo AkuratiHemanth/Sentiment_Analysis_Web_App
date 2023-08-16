@@ -14,10 +14,10 @@
             padding: 0;
         }
         .hero-left h1 {
-            font-size: 1.5rem; /* Adjust font size */
+            font-size: 1.5rem; 
         }
         .hero-name h1 {
-            font-size: 1.2rem; /* Adjust font size */
+            font-size: 1.2rem; 
         }
         .hero-bar {
             background-color: black;
@@ -85,4 +85,31 @@
         {% endif %}
     </div>
 </body>
+<section class="quotations">
+    <div class="quotation-content" id="quotationContent">
+        <script>
+            const quotations = [
+                "Welcome to this Sentimental Analysis Web App made by Akurati Hemanth || The future belongs to those who believe in the beauty of their dreams. || Success is not final, failure is not fatal - It is the courage to continue that counts || Believe you can and you're halfway there || The road to success and the road to failure are almost exactly the same || The only limit to our realization of tomorrow will be our doubts of today || Success is walking from failure to failure with no loss of enthusiasm || Do not wait for the right opportunity, create it || The future depends on what you do today || The only way to do great work is to love what you do || Failure is the opportunity to begin again more intelligently || Don't watch the clock, do what it does, keep going || The best way to predict the future is to create it || Your time is limited, don't waste it living someone else's life || You miss 100% of the shots you don't take; stay hungry, stay foolish || Success is not in what you have, but who you are || The only thing that stands between you and your dream is the will to try and the belief that it is actually possible || Believe in yourself and all that you are, know that there is something inside you that is greater than any obstacle || Success is not the key to happiness, happiness is the key to success || If you love what you are doing, you will be successful || The only person you should try to be better than is the person you were yesterday.",
+            ];
+        
+            const quotationContent = document.getElementById("quotationContent");
+        
+            function displayQuotations() {
+                let quotationText = "";
+                quotations.forEach((quotation) => {
+                    quotationText += `<p>${quotation}</p>`;
+                });
+                quotationContent.innerHTML = quotationText;
+            }
+        
+            displayQuotations();
+            const totalWidth = quotationContent.scrollWidth;
+
+            const scrollSpeed = 2500; 
+            const animationDuration = (totalWidth / scrollSpeed).toFixed(2);
+
+            quotationContent.style.animationDuration = `${animationDuration}s`;
+        </script>        
+    </div>
+</section>
 </html>
