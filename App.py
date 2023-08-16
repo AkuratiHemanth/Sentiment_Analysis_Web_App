@@ -1,10 +1,20 @@
 from flask import Flask, render_template, request
 from Model.Website_Output_Requirements import analyze_sentiment, label_sentiment, generate_wordcloud
+import datetime
+import os
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+def get_background_image():
+    return "static/Pic.jpeg" 
+
+@app.route("/")
 def index():
+    background_image = get_background_image()
+    return render_template("index.html", background_image=background_image)
+
+@app.route("/", methods=["GET", "POST"])
+def analyze_tweet():
     sentiment_result = None
     wordcloud_img = None
 
@@ -22,4 +32,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
