@@ -9,6 +9,7 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
+    background-image: url(./Pic.jpeg);
 }
 
 /* Header styles */
@@ -85,7 +86,7 @@ body {
 }
 
 .hero-name h1 {
-    font-size: 1.5rem;
+    font-size: 6.5rem;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     color: white;
@@ -96,12 +97,12 @@ body {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 20px 10;
-    border: 1px solid;
+    margin: 150px 10px;
+    border: 0px solid;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     max-width: 760px;
-    background-color: black;
+    background-color:black;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -138,27 +139,17 @@ button:hover {
     background-color: transparent;
 }
 
-.wordcloud-container {
-    display: flex;
-    max-width: 600px;
-    background-color: transparent;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-}
 
-.wordcloud-container img {
-    background: transparent;
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
 
 .result {
     display: flex;
+    width: 40%;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     margin: 3rem 10;
     text-align: center;
+    margin-left : 70px;
 }
 
 .result h2 {
@@ -166,5 +157,10 @@ button:hover {
     margin: 0;
 }
 
-@media (max-width: 400px) {
-    .user
+.container{
+    display: flex;
+}
+
+.genImage{
+    width: 80%;
+}
