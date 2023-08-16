@@ -1,11 +1,16 @@
-/* Add your CSS styles here */
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+}
+
+/* Set default font and background color */
+body {
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
+/* Header styles */
 .hero {
     background-color: #007bff;
     color: #fff;
@@ -13,6 +18,28 @@ body {
     padding: 100px 0;
 }
 
+.hero h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* User input form styles */
 .user-input, .result {
     margin: 20px auto;
     padding: 20px;
@@ -25,9 +52,67 @@ body {
 
 textarea {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
     margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
+button:hover {
+    background-color: #0056b3;
+}
+
+/* WordCloud container styles */
+.wordcloud-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.wordcloud-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Result section styles */
+.result {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.result h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .user-input, .result, .wordcloud-container {
+        max-width: 90%;
+    }
+}
