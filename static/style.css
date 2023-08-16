@@ -9,19 +9,44 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
-
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
 /* Header styles */
+/* ... Existing styles ... */
+
 .hero {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ff00b3;
+    color: white;
     text-align: center;
-    padding: 100px 0;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
+/* Hero content styles */
+.hero-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Add space below the video container */
+}
+
+/* Hero name styles */
+.hero-name {
+    margin-bottom: 1rem; /* Add space below the name */
+}
+
+/* ... Existing styles ... */
+ 
 .hero h1 {
     margin-bottom: 10px;
     font-size: 36px;
-}
+} 
 
 .social-links {
     margin-top: 20px;
@@ -38,21 +63,19 @@ body {
 .social-links a:hover {
     transform: scale(1.2);
 }
-
-/* User input form styles */
 .user-input, .result {
-    margin: 20px auto;
+    margin: 20px 10;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     max-width: 600px;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 textarea {
-    width: 100%;
-    padding: 10px;
+    width: 1000%;
+    padding: 100px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -92,12 +115,12 @@ button:hover {
 
 /* Result section styles */
 .result {
-    margin: 3rem auto;
+    margin: 3rem 10;
     text-align: center;
 }
 
 .result h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem 0;
     margin: 0;
 }
 
@@ -110,9 +133,8 @@ footer {
     font-size: 14px;
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 768px) {
     .user-input, .result, .wordcloud-container {
-        max-width: 90%;
+        max-width: 0%;
     }
 }
