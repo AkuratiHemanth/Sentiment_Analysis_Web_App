@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Sentiment Analysis App</title>
+</head>
+<body>
+    <header class="hero">
+        <h1>Sentiment Analysis App</h1>
+        <p>Analyze the sentiment of your tweets!</p>
+    </header>
+
+    <section class="user-input">
+        <h2>Enter a Tweet</h2>
+        <form method="POST">
+            <textarea name="user_tweet" rows="4" cols="50"></textarea><br>
+            <button type="submit">Analyze</button>
+        </form>
+    </section>
+
+    <section class="result">
+        {% if sentiment_result %}
+        <h2>Result: {{ sentiment_result }}</h2>
+        <img src="{{ wordcloud_img }}" alt="WordCloud Image">
+        {% endif %}
+    </section>
+</body>
+</html>
 
