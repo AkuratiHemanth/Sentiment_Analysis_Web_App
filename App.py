@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from sentiment_analysis import label_sentiment, generate_wordcloud
+from Website_Output_Requirements import label_sentiment, generate_wordcloud
 
 app = Flask(__name__)
 
