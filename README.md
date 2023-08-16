@@ -37,5 +37,5 @@ Feel free to contribute and improve the project by submitting pull requests! :sp
 
 ---
 
-**Developed with :heart: Akurati Hemanth**
+**Developed by :heart: Akurati Hemanth**
 
