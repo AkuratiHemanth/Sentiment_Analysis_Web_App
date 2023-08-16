@@ -11,7 +11,7 @@ Welcome to the **Sentiment Analysis Web App**! This project allows users to inpu
 
 **## :art: Screenshots**
 
-![Web App Screenshot](/screenshots/screenshot.png)
+![Web App Screenshot]("C:\Users\heman\Pictures\Screenshots\Screenshot (531).png")
 
 **## :rocket: How to Use**
 
