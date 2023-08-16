@@ -4,94 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Sentix - Sentiment Analyzer</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='ICON.png') }}">
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Courier New', monospace;
             background-image: url("{{ background_image }}");
             background-size: cover;
             margin: 0;
             padding: 0;
         }
-        .hero {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+        .hero-left h1 {
+            font-size: 1.5rem; /* Adjust font size */
         }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin: 0;
+        .hero-name h1 {
+            font-size: 1.2rem; /* Adjust font size */
+        }
+        .hero-bar {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
             margin-bottom: 1rem;
         }
-        .hero p {
+        .hero-bar .middle-text {
+            text-align: center;
+            flex-grow: 1;
             font-size: 1.2rem;
-            margin: 1rem 0;
-        }
-        .social-links img {
-            width: 30px;
-            height: 30px;
-            margin: 0 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .social-links img:hover {
-            transform: scale(1.2);
-        }
-        .user-input {
-            padding: 3rem 0;
-            text-align: center;
-        }
-        .user-input textarea {
-            width: 80%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .user-input button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #007bff;
+            font-family: 'Courier New', Courier, monospace;
             color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
         }
-        .user-input button:hover {
-            background-color: #0056b3;
-        }
-        .result {
-            padding: 3rem 0;
-            text-align: center;
-        }
-        .result h2 {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-        
     </style>
-    <title>Sentiment Analysis App</title>
 </head>
 <body>
     <header class="hero">
-        <div class="hero-content">
-            <h1>Akurati Hemanth</h1>
-        </div>
-        <div class="hero-name">
-            <h1><a href="https://github.com/AkuratiHemanth">Sentimental Analysis</a></h1>
-        </div>
-        <p>Analyze the sentiment of your tweets!</p>
-        <div class="social-links">
-            <a href="https://github.com/AkuratiHemanth" target="_blank"><img src="{{ url_for('static', filename='Github.jpg') }}" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/hemanth-akurati-999ask999" target="_blank"><img src="{{ url_for('static', filename='LinkedIn.jpg') }}" alt="LinkedIn"></a>
+        <div class="hero-bar">
+            <div class="hero-left">
+                <h1>Sentimental Analysis</h1>
+            </div>
+            <div class="middle-text">
+                <p>Analyze the sentiment of your tweets!</p>
+            </div>
+            <div class="hero-right">
+                <div class="social-links">
+                    <a href="https://github.com/AkuratiHemanth" target="_blank">
+                        <img src="{{ url_for('static', filename='Github.jpg') }}" alt="GitHub" class="Github">
+                    </a>
+                    <a href="https://www.linkedin.com/in/hemanth-akurati-999ask999" target="_blank">
+                        <img src="{{ url_for('static', filename='LinkedIn.jpg') }}" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="hero-name">
+                    <h1>Akurati Hemanth</h1>
+                </div>
+            </div>
         </div>
     </header>
     
-
     <section class="user-input">
         <h2>Enter a Tweet</h2>
         <form method="POST">
